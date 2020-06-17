@@ -1,0 +1,5 @@
+22:03:48.747 [main] INFO  invalidtests.EmptyPassword - Email-id is entered
+22:03:51.964 [main] INFO  invalidtests.EmptyPassword - Next button is clicked
+22:03:54.485 [main] INFO  invalidtests.EmptyPassword - Password is entered
+22:03:57.608 [main] INFO  invalidtests.EmptyPassword - Next button is clicked
+22:03:57.660 [main] INFO  invalidtests.EmptyPassword - Error message is captured

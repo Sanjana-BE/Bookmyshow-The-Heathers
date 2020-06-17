@@ -1,0 +1,8 @@
+22:58:36.375 [main] INFO  testCases.TestCases - Continue-via-google is clicked
+22:59:07.638 [main] INFO  testCases.TestCases - Sign-in unsuccessfull
+22:59:38.879 [main] INFO  testCases.TestCases - Sign-in unsuccessfull
+23:00:05.948 [main] INFO  testCases.TestCases - Sign-in unsuccessfull
+23:00:36.511 [main] INFO  testCases.TestCases - Sign-in unsuccessfull
+23:01:06.890 [main] INFO  testCases.TestCases - Sign-in successfull
+23:01:20.950 [main] INFO  testCases.TestCases - Sports is clicked
+23:01:24.012 [main] INFO  testCases.TestCases - Page Title is stored in a string

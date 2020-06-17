@@ -1,0 +1,7 @@
+15:42:24.570 [main] INFO  testCases.TestCases - Sign-in unsuccessful
+15:42:31.987 [main] INFO  testCases.TestCases - Sign-in unsuccessful
+15:42:41.080 [main] INFO  testCases.TestCases - Sign-in successful
+15:42:51.842 [main] INFO  testCases.TestCases - Sports is clicked
+15:42:55.055 [main] INFO  testCases.TestCases - Page Title is stored in a string
+15:43:03.346 [main] INFO  testCases.TestCases - Expected Results matches Actual Results
+15:43:03.667 [main] INFO  testCases.TestCases - Weekend is clicked

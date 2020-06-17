@@ -1,0 +1,6 @@
+20:41:23.773 [TestNG-tests-1] INFO  testCases.TestCases - Page Title is stored in a string
+20:41:32.495 [TestNG-tests-1] INFO  testCases.TestCases - Weekend is clicked
+20:41:45.113 [TestNG-tests-1] INFO  testCases.TestCases - Price Range is clicked
+20:41:48.474 [TestNG-tests-1] INFO  testCases.TestCases - Minimum Range is clicked
+20:41:52.102 [TestNG-tests-1] INFO  testCases.TestCases - Sports activities are displayed
+20:42:38.871 [TestNG-tests-1] INFO  testCases.TestCases - Navigated to Movies Page

@@ -1,0 +1,7 @@
+22:06:22.276 [main] INFO  invalidtests.BlankUsername - Browser is invoked
+22:06:28.857 [main] INFO  invalidtests.BlankUsername - Website is launched
+22:06:33.087 [main] INFO  invalidtests.BlankUsername - Browser window is maximized
+22:06:36.110 [main] INFO  invalidtests.BlankUsername - City is selected
+22:06:40.290 [main] INFO  invalidtests.BlankUsername - Not now is clicked
+22:06:44.236 [main] INFO  invalidtests.BlankUsername - Sign-in button is clicked
+22:06:47.549 [main] INFO  invalidtests.BlankUsername - Continue-via-google button is clicked

@@ -1,0 +1,7 @@
+18:14:36.143 [main] INFO  testCases.TestCases - Sign-in unsuccessfull
+18:14:42.798 [main] INFO  testCases.TestCases - Sign-in successfull
+18:14:50.714 [main] INFO  testCases.TestCases - Sports is clicked
+18:14:53.760 [main] INFO  testCases.TestCases - Page Title is stored in a string
+18:15:02.245 [main] INFO  testCases.TestCases - Weekend is clicked
+18:15:14.595 [main] INFO  testCases.TestCases - Price Range is clicked
+18:15:17.975 [main] INFO  testCases.TestCases - Minimum Range is clicked

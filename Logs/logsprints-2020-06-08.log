@@ -1,0 +1,6 @@
+09:06:29.009 [main] INFO  regressionTest.RegressionTesting - Page Title is stored in a string
+09:06:41.042 [main] INFO  regressionTest.RegressionTesting - City is selected
+09:06:44.433 [main] INFO  regressionTest.RegressionTesting - Not now is clicked
+09:06:48.483 [main] INFO  regressionTest.RegressionTesting - Sign-in button is clicked
+09:06:50.746 [main] INFO  regressionTest.RegressionTesting - Continue-via-google is clickedd
+09:07:23.081 [main] INFO  regressionTest.RegressionTesting - Sign-in successful

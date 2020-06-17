@@ -1,0 +1,6 @@
+20:06:51.776 [TestNG-tests-2] INFO  invalidtests.EmptyPassword - Next button is clicked
+20:06:53.027 [TestNG-tests-1] INFO  invalidtests.EmptyPassword - Passwordd is entered
+20:06:53.868 [TestNG-tests-2] INFO  invalidtests.EmptyPassword - Passwordd is entered
+20:06:56.172 [TestNG-tests-1] INFO  invalidtests.EmptyPassword - Next button is clicked
+20:06:56.291 [TestNG-tests-1] INFO  invalidtests.EmptyPassword - Error message is captured
+20:06:57.004 [TestNG-tests-2] INFO  invalidtests.EmptyPassword - Next button is clicked

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BlankUserNameSuite">
+<test thread-count="5" name="BlankUserNameTes">
+    <classes>
+      <class name="testCases.TestCases">
+      <methods>
+      <include name="Test_Browser_And_URL_Invoked_Correctly"></include>
+      <include name="Test_City_Is_Selected_Correctly"></include>
+      <include name="Test_Popup_Is_Ignored"></include>
+      <include name="Test_Signin_Button_Is_clicked"></include>
+      <include name="Test_Continue_Via_Google_Button_Is_Clicked"></include>
+      <include name="Test_Blank_UserName"></include>
+      </methods>
+      </class>
+    </classes>
+  </test><!-- Test -->
+</suite> <!-- Suite -->
