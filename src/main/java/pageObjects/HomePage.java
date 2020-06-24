@@ -66,6 +66,7 @@ public class HomePage extends BaseClass {
 			WebElement element = driver.findElement(By.linkText(signin));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
+			Thread.sleep(3000);
 		}
 		
 		//clicking the continue-via-google button. xpath is taken from the properties file.
@@ -77,6 +78,7 @@ public class HomePage extends BaseClass {
 			WebElement element = driver.findElement(By.xpath(clickElement));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
+			Thread.sleep(3000);
 		}
 		
 		//signing in to bookmyshow by handling the windows
@@ -91,19 +93,19 @@ public class HomePage extends BaseClass {
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;	
 			
 			this.setUserName(strUserName);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.clicknext();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.setPassword(strPassword);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.clickPasswordNext();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			driver.switchTo().window(main);
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			Thread.sleep(2000);
 		}
 		
 		public void invalidsignin(WebDriver driver, String strUserName, String strPassword) throws IOException, InterruptedException{
@@ -117,30 +119,30 @@ public class HomePage extends BaseClass {
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;	
 			
 			this.setUserNameForInvalidTest(strUserName);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.clickNext();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.setInvalidPassword(strPassword);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.clickSubmit();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			properties = fromPropertiesFile();
 			
 			warningmessage = properties.getProperty("warningmessage");
 			
 			WebElement element = driver.findElement(By.xpath(warningmessage));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			String errormessage = element.getText();
 			
 			System.out.println(errormessage);
 			System.out.println("********************************************************************");
 			
 			driver.close();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			driver.switchTo().window(main);
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		}
@@ -156,24 +158,24 @@ public class HomePage extends BaseClass {
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;	
 			
 			this.setUserName(strUserName);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			this.clicknext();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			
 			properties = fromPropertiesFile();
 			
 			errormessage = properties.getProperty("errormessage");
 			
 			WebElement element = driver.findElement(By.xpath(errormessage));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			String errormessage = element.getText();
 			
 			System.out.println(errormessage);
 			System.out.println("********************************************************************");
 			
 			driver.close();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			driver.switchTo().window(main);
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		}
@@ -215,7 +217,9 @@ public class HomePage extends BaseClass {
 			WebElement emailid = driver.findElement(By.xpath(element));
 			wait.until(ExpectedConditions.elementToBeClickable(emailid));
 			emailid.clear();
+			Thread.sleep(2000);
 			emailid.sendKeys(strUserName);
+			Thread.sleep(2000);
 		}
 		
 		//entering the password using sendkeys. xpath is taken from the properties file.
@@ -226,7 +230,9 @@ public class HomePage extends BaseClass {
 			WebElement password = driver.findElement(By.name(element));
 			wait.until(ExpectedConditions.elementToBeClickable(password));
 			password.clear();
+			Thread.sleep(2000);
 			password.sendKeys(strPassword);
+			Thread.sleep(2000);
 		}
 		
 		//clicking next after entering the username. xpath is taken from the properties file.
@@ -235,8 +241,11 @@ public class HomePage extends BaseClass {
 			next = d.getEmailNext();
 			String emailNext = property.getProperty(next);
 			WebElement element = driver.findElement(By.xpath(emailNext));
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
+			Thread.sleep(2000);
 			element.click();
+			Thread.sleep(2000);
 		}
 		
 		//clicking next after entering the password. xpath is taken from the properties file.
@@ -245,8 +254,11 @@ public class HomePage extends BaseClass {
 			passwordNext = d.getPasswordNext();
 			String passwordnext = property.getProperty(passwordNext);
 			WebElement element = driver.findElement(By.xpath(passwordnext));
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
+			Thread.sleep(2000);
 			element.click();
+			Thread.sleep(2000);
 		}
 		
 		//entering the username using sendkeys. xpath is taken from the properties file.
@@ -255,9 +267,13 @@ public class HomePage extends BaseClass {
 			enter = d.getEmail();
 			String element = property.getProperty(enter);
 			WebElement emailid = driver.findElement(By.xpath(element));
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(emailid));
+			Thread.sleep(2000);
 			emailid.clear();
+			Thread.sleep(2000);
 			emailid.sendKeys(strUserName);
+			Thread.sleep(2000);
 		}
 				
 		//entering the password using sendkeys. xpath is taken from the properties file.
@@ -266,9 +282,13 @@ public class HomePage extends BaseClass {
 			enterPassword = d.getPasswordTextBox();
 			String element = property.getProperty(enterPassword);
 			WebElement password = driver.findElement(By.xpath(element));
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(password));
+			Thread.sleep(2000);
 			password.clear();
+			Thread.sleep(2000);
 			password.sendKeys(strPassword);
+			Thread.sleep(2000);
 		}
 				
 		//clicking next after entering the username. xpath is taken from the properties file.
@@ -277,8 +297,11 @@ public class HomePage extends BaseClass {
 			next = d.getEmailNext();
 			String emailNext = property.getProperty(next);
 			WebElement element = driver.findElement(By.xpath(emailNext));
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
+			Thread.sleep(2000);
 			element.click();
+			Thread.sleep(2000);
 		}
 				
 		//clicking next after entering the password. xpath is taken from the properties file.
@@ -287,7 +310,10 @@ public class HomePage extends BaseClass {
 			passwordNext = d.getSubmit();
 			String passwordnext = property.getProperty(passwordNext);
 			WebElement element = driver.findElement(By.xpath(passwordnext));
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
+			Thread.sleep(2000);
 			element.click();
+			Thread.sleep(2000);
 		}
 }
