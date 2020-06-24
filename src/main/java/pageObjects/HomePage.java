@@ -41,19 +41,20 @@ public class HomePage extends BaseClass {
 			selectcity = d.getCity();
 			String city = property.getProperty(selectcity);
 			WebElement location = driver.findElement(By.linkText(city));
-			wait.until(ExpectedConditions.visibilityOf(location));
-			location.click();
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", location);
 		}
 		
 		//clicking "not now" in the popup. xpath is taken from the properties file.
-		public void popup() throws IOException
+		public void popup() throws IOException, InterruptedException
 		{
 			property = invokeWebelementsPropertiesFile();
 			notnow = d.getPopup();
 			String popup = property.getProperty(notnow);
 			WebElement element = driver.findElement(By.xpath(popup));
-			wait.until(ExpectedConditions.visibilityOf(element));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
+			Thread.sleep(5000);
 		}
 		
 		//clicking the signin button. xpath is taken from the properties file.
@@ -63,7 +64,7 @@ public class HomePage extends BaseClass {
 			signinbutton = d.getSigninButton();
 			String signin = property.getProperty(signinbutton);
 			WebElement element = driver.findElement(By.linkText(signin));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 		}
 		
@@ -74,7 +75,7 @@ public class HomePage extends BaseClass {
 			click = d.getContinueViaGoogleButton();
 			String clickElement = property.getProperty(click);
 			WebElement element = driver.findElement(By.xpath(clickElement));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 		}
 		
@@ -212,7 +213,7 @@ public class HomePage extends BaseClass {
 			enter = d.getEmailField();
 			String element = property.getProperty(enter);
 			WebElement emailid = driver.findElement(By.xpath(element));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			wait.until(ExpectedConditions.elementToBeClickable(emailid));
 			emailid.clear();
 			emailid.sendKeys(strUserName);
 		}
@@ -223,7 +224,7 @@ public class HomePage extends BaseClass {
 			enterPassword = d.getPasswordField();
 			String element = property.getProperty(enterPassword);
 			WebElement password = driver.findElement(By.name(element));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			wait.until(ExpectedConditions.elementToBeClickable(password));
 			password.clear();
 			password.sendKeys(strPassword);
 		}
@@ -234,7 +235,7 @@ public class HomePage extends BaseClass {
 			next = d.getEmailNext();
 			String emailNext = property.getProperty(next);
 			WebElement element = driver.findElement(By.xpath(emailNext));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 		}
 		
@@ -244,7 +245,7 @@ public class HomePage extends BaseClass {
 			passwordNext = d.getPasswordNext();
 			String passwordnext = property.getProperty(passwordNext);
 			WebElement element = driver.findElement(By.xpath(passwordnext));
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 		}
 		
