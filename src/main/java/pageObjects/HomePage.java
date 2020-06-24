@@ -66,6 +66,7 @@ public class HomePage extends BaseClass {
 			WebElement element = driver.findElement(By.linkText(signin));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
+			System.out.println("Sign-in is clicked");
 			Thread.sleep(3000);
 		}
 		
