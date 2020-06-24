@@ -265,7 +265,7 @@ public class HomePage extends BaseClass {
 			property = invokeWebelementsPropertiesFile();
 			passwordNext = d.getPasswordNext();
 			String passwordnext = property.getProperty(passwordNext);
-			WebElement element = driver.findElement(By.xpath(passwordnext));
+			WebElement element = driver.findElement(By.id(passwordnext));
 			System.out.println("Submit Button is Found");
 			System.out.println("********************************************************************");
 			Thread.sleep(2000);
