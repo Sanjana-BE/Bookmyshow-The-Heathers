@@ -605,11 +605,11 @@ public class TestCases extends BaseClass{
 			System.out.println("********************************************************************");
 			System.out.println(objSportsPage.gettitle5());
 			System.out.println("********************************************************************");
-			
+			/*
 			System.out.println(objSportsPage.gettitle6());
 			System.out.println("********************************************************************");
 			System.out.println(objSportsPage.gettitle7());
-			System.out.println("********************************************************************");
+			System.out.println("********************************************************************");*/
 			System.out.println("END OF SPORTS ACTIVITIES");
 			System.out.println("********************************************************************");
 			
