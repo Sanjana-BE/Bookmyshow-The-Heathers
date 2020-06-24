@@ -264,7 +264,7 @@ public class HomePage extends BaseClass {
 			property = invokeWebelementsPropertiesFile();
 			enterPassword = d.getPasswordTextBox();
 			String element = property.getProperty(enterPassword);
-			WebElement password = driver.findElement(By.name(element));
+			WebElement password = driver.findElement(By.xpath(element));
 			wait.until(ExpectedConditions.elementToBeClickable(password));
 			password.clear();
 			password.sendKeys(strPassword);
