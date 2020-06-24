@@ -118,16 +118,16 @@ public class HomePage extends BaseClass {
 			
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;	
 			
-			this.setUserNameForInvalidTest(strUserName);
+			this.setUserName(strUserName);
 			Thread.sleep(2000);
 			
-			this.clickNext();
+			this.clicknext();
 			Thread.sleep(2000);
 			
-			this.setInvalidPassword(strPassword);
+			this.setPassword(strPassword);
 			Thread.sleep(2000);
 			
-			this.clickSubmit();
+			this.clickPasswordNext();
 			Thread.sleep(2000);
 			
 			properties = fromPropertiesFile();
@@ -215,10 +215,14 @@ public class HomePage extends BaseClass {
 			enter = d.getEmailField();
 			String element = property.getProperty(enter);
 			WebElement emailid = driver.findElement(By.xpath(element));
+			System.out.println("Email Field Found");
+			System.out.println("********************************************************************");
 			wait.until(ExpectedConditions.elementToBeClickable(emailid));
 			emailid.clear();
 			Thread.sleep(2000);
 			emailid.sendKeys(strUserName);
+			System.out.println("Email-id is entered");
+			System.out.println("********************************************************************");
 			Thread.sleep(2000);
 		}
 		
@@ -228,10 +232,14 @@ public class HomePage extends BaseClass {
 			enterPassword = d.getPasswordField();
 			String element = property.getProperty(enterPassword);
 			WebElement password = driver.findElement(By.name(element));
+			System.out.println("Password Field Found");
+			System.out.println("********************************************************************");
 			wait.until(ExpectedConditions.elementToBeClickable(password));
 			password.clear();
 			Thread.sleep(2000);
 			password.sendKeys(strPassword);
+			System.out.println("Password is entered");
+			System.out.println("********************************************************************");
 			Thread.sleep(2000);
 		}
 		
@@ -241,10 +249,14 @@ public class HomePage extends BaseClass {
 			next = d.getEmailNext();
 			String emailNext = property.getProperty(next);
 			WebElement element = driver.findElement(By.xpath(emailNext));
+			System.out.println("EmailNext is Found");
+			System.out.println("********************************************************************");
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			Thread.sleep(2000);
 			element.click();
+			System.out.println("EmailNext is clicked");
+			System.out.println("********************************************************************");
 			Thread.sleep(2000);
 		}
 		
@@ -254,66 +266,15 @@ public class HomePage extends BaseClass {
 			passwordNext = d.getPasswordNext();
 			String passwordnext = property.getProperty(passwordNext);
 			WebElement element = driver.findElement(By.xpath(passwordnext));
+			System.out.println("Submit Button is Found");
+			System.out.println("********************************************************************");
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			Thread.sleep(2000);
 			element.click();
+			System.out.println("Submit is clicked");
+			System.out.println("********************************************************************");
 			Thread.sleep(2000);
 		}
 		
-		//entering the username using sendkeys. xpath is taken from the properties file.
-		public void setUserNameForInvalidTest(String strUserName) throws IOException, InterruptedException{
-			property = invokeWebelementsPropertiesFile();
-			enter = d.getEmailField();
-			String element = property.getProperty(enter);
-			WebElement emailid = driver.findElement(By.xpath(element));
-			Thread.sleep(2000);
-			wait.until(ExpectedConditions.elementToBeClickable(emailid));
-			Thread.sleep(2000);
-			emailid.clear();
-			Thread.sleep(2000);
-			emailid.sendKeys(strUserName);
-			Thread.sleep(2000);
-		}
-				
-		//entering the password using sendkeys. xpath is taken from the properties file.
-		public void setInvalidPassword(String strPassword) throws IOException, InterruptedException {
-			property = invokeWebelementsPropertiesFile();
-			enterPassword = d.getPasswordTextBox();
-			String element = property.getProperty(enterPassword);
-			WebElement password = driver.findElement(By.xpath(element));
-			Thread.sleep(2000);
-			wait.until(ExpectedConditions.elementToBeClickable(password));
-			Thread.sleep(2000);
-			password.clear();
-			Thread.sleep(2000);
-			password.sendKeys(strPassword);
-			Thread.sleep(2000);
-		}
-				
-		//clicking next after entering the username. xpath is taken from the properties file.
-		public void clickNext() throws IOException, InterruptedException{
-			property = invokeWebelementsPropertiesFile();
-			next = d.getEmailNext();
-			String emailNext = property.getProperty(next);
-			WebElement element = driver.findElement(By.xpath(emailNext));
-			Thread.sleep(2000);
-			wait.until(ExpectedConditions.elementToBeClickable(element));
-			Thread.sleep(2000);
-			element.click();
-			Thread.sleep(2000);
-		}
-				
-		//clicking next after entering the password. xpath is taken from the properties file.
-		public void clickSubmit() throws IOException, InterruptedException {
-			property = invokeWebelementsPropertiesFile();
-			passwordNext = d.getSubmit();
-			String passwordnext = property.getProperty(passwordNext);
-			WebElement element = driver.findElement(By.xpath(passwordnext));
-			Thread.sleep(2000);
-			wait.until(ExpectedConditions.elementToBeClickable(element));
-			Thread.sleep(2000);
-			element.click();
-			Thread.sleep(2000);
-		}
 }
