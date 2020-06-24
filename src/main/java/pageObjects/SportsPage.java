@@ -116,7 +116,7 @@ public class SportsPage extends BaseClass {
 		wait.until(ExpectedConditions.visibilityOf(element));
 		return element.getText();
 	}
-	/*	
+		
 	//getting the name of the sports activities displayed after applying the filters. the required xpath is taken from the properties file.
 	public String gettitle6() throws IOException, InterruptedException {
 		property = invokeWebelementsPropertiesFile();
@@ -131,5 +131,5 @@ public class SportsPage extends BaseClass {
 		WebElement element =  driver.findElement(By.xpath(property.getProperty("title7")));
 		wait.until(ExpectedConditions.visibilityOf(element));
 		return element.getText();
-	}*/
+	}
 }
