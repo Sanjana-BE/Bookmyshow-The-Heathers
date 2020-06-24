@@ -75,7 +75,7 @@ public class TestData extends BaseClass {
 	
 	//get emailField from excel class
 	
-	public String getEmail() throws IOException
+	public String getEmail() throws IOException, InterruptedException
 	{
 		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
 		ImportFromExcel d= new ImportFromExcel();
@@ -159,7 +159,7 @@ public class TestData extends BaseClass {
 	
 	//get emailNext from excel class
 	
-	public String getNext() throws IOException
+	public String getNext() throws IOException, InterruptedException
 	{
 		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
 		ImportFromExcel d= new ImportFromExcel();
@@ -181,7 +181,7 @@ public class TestData extends BaseClass {
 	
 	//get passwordField from excel class
 	
-	public String getPasswordTextBox() throws IOException
+	public String getPasswordTextBox() throws IOException, InterruptedException
 	{
 		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
 		ImportFromExcel d= new ImportFromExcel();
@@ -223,7 +223,7 @@ public class TestData extends BaseClass {
 	
 	//get password from excel class
 	
-	public String getSubmit() throws IOException
+	public String getSubmit() throws IOException, InterruptedException
 	{
 		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
 		ImportFromExcel d= new ImportFromExcel();
