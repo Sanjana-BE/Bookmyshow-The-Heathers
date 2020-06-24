@@ -73,17 +73,6 @@ public class TestData extends BaseClass {
 		return Title;
 	}
 	
-	//get emailField from excel class
-	
-	public String getEmail() throws IOException, InterruptedException
-	{
-		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
-		ImportFromExcel d= new ImportFromExcel();
-		ArrayList data1=d.getdata("EmailField");
-		String Title=(String) data1.get(1);
-		return Title;
-	}
-	
 	//get username from excel class
 	
 	public String getUsername() throws IOException
@@ -157,17 +146,6 @@ public class TestData extends BaseClass {
 		return Title;
 	}
 	
-	//get emailNext from excel class
-	
-	public String getNext() throws IOException, InterruptedException
-	{
-		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
-		ImportFromExcel d= new ImportFromExcel();
-		ArrayList data1=d.getdata("EmailNext");
-		String Title=(String) data1.get(1);
-		return Title;
-	}
-	
 	//get passwordField from excel class
 	
 	public String getPasswordField() throws IOException
@@ -175,17 +153,6 @@ public class TestData extends BaseClass {
 		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
 		ImportFromExcel d= new ImportFromExcel();
 		ArrayList data1=d.getdata("Masked Text Box");
-		String Password=(String) data1.get(1);
-		return Password;
-	}
-	
-	//get passwordField from excel class
-	
-	public String getPasswordTextBox() throws IOException, InterruptedException
-	{
-		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
-		ImportFromExcel d= new ImportFromExcel();
-		ArrayList data1=d.getdata("PasswordField");
 		String Password=(String) data1.get(1);
 		return Password;
 	}
@@ -217,17 +184,6 @@ public class TestData extends BaseClass {
 		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
 		ImportFromExcel d= new ImportFromExcel();
 		ArrayList data1=d.getdata("Submit Button");
-		String Password=(String) data1.get(1);
-		return Password;
-	}
-	
-	//get password from excel class
-	
-	public String getSubmit() throws IOException, InterruptedException
-	{
-		//the value returned by importfromexcel class is added in arraylist and it is sent to the main class where it is called.
-		ImportFromExcel d= new ImportFromExcel();
-		ArrayList data1=d.getdata("PasswordNext");
 		String Password=(String) data1.get(1);
 		return Password;
 	}
