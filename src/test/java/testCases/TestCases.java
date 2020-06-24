@@ -9,6 +9,7 @@ import pageObjects.SportsPage;
 import setUp.BaseClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -134,8 +135,10 @@ public class TestCases extends BaseClass{
 		this.objHomePage = new HomePage(driver);
 		
 		try {
+			Thread.sleep(5000);
 			//calling the selectarea() method in HomePage class
 			objHomePage.selectArea();
+			Thread.sleep(3000);
 			
 			log.info("City is selected");
 			
@@ -165,6 +168,7 @@ public class TestCases extends BaseClass{
 		try {
 			//calling the popup() method in HomePage class
 			objHomePage.popup();
+			Thread.sleep(5000);
 			
 			log.info("Not now is clicked");
 			
@@ -191,6 +195,7 @@ public class TestCases extends BaseClass{
 		
 		try {
 			this.objHomePage = new HomePage(driver);
+			Thread.sleep(3000);
 			
 			//calling the signinButton() method in HomePage class
 			objHomePage.signinButton();
@@ -600,11 +605,11 @@ public class TestCases extends BaseClass{
 			System.out.println("********************************************************************");
 			System.out.println(objSportsPage.gettitle5());
 			System.out.println("********************************************************************");
-			/*
+			
 			System.out.println(objSportsPage.gettitle6());
 			System.out.println("********************************************************************");
 			System.out.println(objSportsPage.gettitle7());
-			System.out.println("********************************************************************");*/
+			System.out.println("********************************************************************");
 			System.out.println("END OF SPORTS ACTIVITIES");
 			System.out.println("********************************************************************");
 			
