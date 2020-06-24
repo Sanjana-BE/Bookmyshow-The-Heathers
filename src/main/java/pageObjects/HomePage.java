@@ -115,16 +115,16 @@ public class HomePage extends BaseClass {
 			
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;	
 			
-			this.setUserName(strUserName);
+			this.setUserNameForInvalidTest(strUserName);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
-			this.clicknext();
+			this.clickNext();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
-			this.setPassword(strPassword);
+			this.setInvalidPassword(strPassword);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
-			this.clickPasswordNext();
+			this.clickSubmit();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
 			properties = fromPropertiesFile();
@@ -248,4 +248,45 @@ public class HomePage extends BaseClass {
 			element.click();
 		}
 		
+		//entering the username using sendkeys. xpath is taken from the properties file.
+		public void setUserNameForInvalidTest(String strUserName) throws IOException{
+			property = invokeWebelementsPropertiesFile();
+			enter = d.getEmail();
+			String element = property.getProperty(enter);
+			WebElement emailid = driver.findElement(By.xpath(element));
+			wait.until(ExpectedConditions.elementToBeClickable(emailid));
+			emailid.clear();
+			emailid.sendKeys(strUserName);
+		}
+				
+		//entering the password using sendkeys. xpath is taken from the properties file.
+		public void setInvalidPassword(String strPassword) throws IOException {
+			property = invokeWebelementsPropertiesFile();
+			enterPassword = d.getPasswordTextBox();
+			String element = property.getProperty(enterPassword);
+			WebElement password = driver.findElement(By.name(element));
+			wait.until(ExpectedConditions.elementToBeClickable(password));
+			password.clear();
+			password.sendKeys(strPassword);
+		}
+				
+		//clicking next after entering the username. xpath is taken from the properties file.
+		public void clickNext() throws IOException{
+			property = invokeWebelementsPropertiesFile();
+			next = d.getEmailNext();
+			String emailNext = property.getProperty(next);
+			WebElement element = driver.findElement(By.xpath(emailNext));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		}
+				
+		//clicking next after entering the password. xpath is taken from the properties file.
+		public void clickSubmit() throws IOException {
+			property = invokeWebelementsPropertiesFile();
+			passwordNext = d.getSubmit();
+			String passwordnext = property.getProperty(passwordNext);
+			WebElement element = driver.findElement(By.xpath(passwordnext));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		}
 }
