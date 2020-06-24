@@ -58,7 +58,7 @@ public class HomePage extends BaseClass {
 		}
 		
 		//clicking the signin button. xpath is taken from the properties file.
-		public void signinButton() throws IOException
+		public void signinButton() throws IOException, InterruptedException
 		{
 			property = invokeWebelementsPropertiesFile();
 			signinbutton = d.getSigninButton();
@@ -70,7 +70,7 @@ public class HomePage extends BaseClass {
 		}
 		
 		//clicking the continue-via-google button. xpath is taken from the properties file.
-		public void selectContinueViaGoogle() throws IOException
+		public void selectContinueViaGoogle() throws IOException, InterruptedException
 		{
 			property = invokeWebelementsPropertiesFile();
 			click = d.getContinueViaGoogleButton();
@@ -210,7 +210,7 @@ public class HomePage extends BaseClass {
 		}
 		
 		//entering the username using sendkeys. xpath is taken from the properties file.
-		public void setUserName(String strUserName) throws IOException{
+		public void setUserName(String strUserName) throws IOException, InterruptedException{
 			property = invokeWebelementsPropertiesFile();
 			enter = d.getEmailField();
 			String element = property.getProperty(enter);
@@ -223,7 +223,7 @@ public class HomePage extends BaseClass {
 		}
 		
 		//entering the password using sendkeys. xpath is taken from the properties file.
-		public void setPassword(String strPassword) throws IOException {
+		public void setPassword(String strPassword) throws IOException, InterruptedException {
 			property = invokeWebelementsPropertiesFile();
 			enterPassword = d.getPasswordField();
 			String element = property.getProperty(enterPassword);
@@ -236,7 +236,7 @@ public class HomePage extends BaseClass {
 		}
 		
 		//clicking next after entering the username. xpath is taken from the properties file.
-		public void clicknext() throws IOException{
+		public void clicknext() throws IOException, InterruptedException{
 			property = invokeWebelementsPropertiesFile();
 			next = d.getEmailNext();
 			String emailNext = property.getProperty(next);
@@ -249,7 +249,7 @@ public class HomePage extends BaseClass {
 		}
 		
 		//clicking next after entering the password. xpath is taken from the properties file.
-		public void clickPasswordNext() throws IOException {
+		public void clickPasswordNext() throws IOException, InterruptedException {
 			property = invokeWebelementsPropertiesFile();
 			passwordNext = d.getPasswordNext();
 			String passwordnext = property.getProperty(passwordNext);
@@ -262,9 +262,9 @@ public class HomePage extends BaseClass {
 		}
 		
 		//entering the username using sendkeys. xpath is taken from the properties file.
-		public void setUserNameForInvalidTest(String strUserName) throws IOException{
+		public void setUserNameForInvalidTest(String strUserName) throws IOException, InterruptedException{
 			property = invokeWebelementsPropertiesFile();
-			enter = d.getEmail();
+			enter = d.getEmailField();
 			String element = property.getProperty(enter);
 			WebElement emailid = driver.findElement(By.xpath(element));
 			Thread.sleep(2000);
@@ -277,7 +277,7 @@ public class HomePage extends BaseClass {
 		}
 				
 		//entering the password using sendkeys. xpath is taken from the properties file.
-		public void setInvalidPassword(String strPassword) throws IOException {
+		public void setInvalidPassword(String strPassword) throws IOException, InterruptedException {
 			property = invokeWebelementsPropertiesFile();
 			enterPassword = d.getPasswordTextBox();
 			String element = property.getProperty(enterPassword);
@@ -292,7 +292,7 @@ public class HomePage extends BaseClass {
 		}
 				
 		//clicking next after entering the username. xpath is taken from the properties file.
-		public void clickNext() throws IOException{
+		public void clickNext() throws IOException, InterruptedException{
 			property = invokeWebelementsPropertiesFile();
 			next = d.getEmailNext();
 			String emailNext = property.getProperty(next);
@@ -305,7 +305,7 @@ public class HomePage extends BaseClass {
 		}
 				
 		//clicking next after entering the password. xpath is taken from the properties file.
-		public void clickSubmit() throws IOException {
+		public void clickSubmit() throws IOException, InterruptedException {
 			property = invokeWebelementsPropertiesFile();
 			passwordNext = d.getSubmit();
 			String passwordnext = property.getProperty(passwordNext);
